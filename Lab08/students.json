@@ -1,0 +1,93 @@
+[
+    {
+      "studentID": "s0001",
+      "studentName": "Smith Loy",
+      "email": "smith@gmail.com",
+      "deptNo": "d01"
+    },
+    {
+      "studentID": "s0002",
+      "studentName": "Mary Jane",
+      "email": "mar@hotmail.com",
+      "deptNo": "d01"
+    },
+    {
+      "studentID": "s0003",
+      "studentName": "Wiily Mac",
+      "email": "will@gmail.com",
+      "deptNo": "d02"
+    },
+    {
+      "studentID": "s0004",
+      "studentName": "John Doe",
+      "email": "john@gmail.com",
+      "deptNo": "d03"
+    },
+    {
+      "studentID": "s0005",
+      "studentName": "Alice Green",
+      "email": "alice@gmail.com",
+      "deptNo": "d04"
+    },
+    {
+      "studentID": "s0006",
+      "studentName": "Robert Brown",
+      "email": "robert@gmail.com",
+      "deptNo": "d05"
+    },
+    {
+      "studentID": "s0007",
+      "studentName": "Linda White",
+      "email": "linda@gmail.com",
+      "deptNo": "d06"
+    },
+    {
+      "studentID": "s0008",
+      "studentName": "James Black",
+      "email": "james@gmail.com",
+      "deptNo": "d02"
+    },
+    {
+      "studentID": "s0009",
+      "studentName": "Patricia Yellow",
+      "email": "patricia@gmail.com",
+      "deptNo": "d01"
+    },
+    {
+      "studentID": "s0010",
+      "studentName": "Michael Blue",
+      "email": "michael@gmail.com",
+      "deptNo": "d07"
+    },
+    {
+      "studentID": "s0011",
+      "studentName": "Barbara Violet",
+      "email": "barbara@gmail.com",
+      "deptNo": "d08"
+    },
+    {
+      "studentID": "s0012",
+      "studentName": "David Gray",
+      "email": "david@gmail.com",
+      "deptNo": "d04"
+    },
+    {
+      "studentID": "s0013",
+      "studentName": "Susan Orange",
+      "email": "susan@gmail.com",
+      "deptNo": "d05"
+    },
+    {
+      "studentID": "s0014",
+      "studentName": "Charles Purple",
+      "email": "charles@gmail.com",
+      "deptNo": "d06"
+    },
+    {
+      "studentID": "s0015",
+      "studentName": "Jennifer Brown",
+      "email": "jennifer@gmail.com",
+      "deptNo": "d07"
+    }
+  ]
+  

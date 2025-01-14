@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>test XML Dom</title>
+    </head>
+    <body>
+         <script event="onload">
+               var text =  "<persons>" +
+                               "<person>" +
+                                  "<firstName>Alan</firstName>" +
+                                  "<lastName>Wilkes</lastName>" +
+                             "</person>" +
+                             "<person>" +
+                                 "<firstName>Howard</firstName>" +
+                                 "<lastName>Li</lastName>" +
+                            "</person>" +
+                           "</persons>";
+               var parser = new DOMParser()
+               var xmlDoc = parser.parseFromString(text, "text/xml")
+               alert("Root element = " + xmlDoc.documentElement.nodeName)   
+               alert(xmlDoc.getElementsByTagName("lastName")[1].firstChild.nodeValue) //เข้าถึง Li
+               //alert(xmlDoc.getElementsByTagName("person")[0].)  // เข้าถึง Alan
+               //alert(xmlDoc.getElementsByTagName("lastName")[0].)  // เข้าถึง Wilkes
+
+</script>
+  </body>
+</html>

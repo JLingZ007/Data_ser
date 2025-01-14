@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List - Computing and Digital Technologies Major</h1>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Year Of Study</th>
+            <th>Email</th>
+            <th>Manage</th>
+        </tr>
+        <% students.forEach(function(student) { %>
+            <tr>
+                <td><%= student.StudentID %></td>
+                <td><%= student.Name %></td>
+                <td><%= student.YearofStudy %></td>
+                <td><%= student.Email %></td>
+                <td>
+                    <button class="edit-btn" data-id="<%= student._id %>"><a href="/student/editForm/<%= student._id %>">edit</a></button>
+                    <button class="delete-btn" data-id="<%= student._id %>">Delete</button>   
+                </td>
+                
+            </tr>
+        <% }); %>
+    </table>
+    <script>
+        
+
+
+
+
+        //////////////////////////////////////////////////////////////////////////
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        deleteButtons.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                const end =`/student/${btn.dataset.id}`
+                alert(end)
+                fetch(end , {
+                    method: 'DELETE'
+                }).then(window.location.href = '/student')
+            })
+        })
+
+    </script>
+</body>
+</html>

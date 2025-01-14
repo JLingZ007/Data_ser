@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="container">
+      <div id="main" class="card card-body">
+         <h2 class="title">Add Items</h2>
+         <form>
+           <input type="text" name="item" id="resultField" /><br/>
+           <input type="radio" id="radioLC" name="convert" onclick="convertText()" />
+           <label for="radioLC">Lower case</label><br>
+           <input type="radio" id="radioUC" name="convert" onclick="convertText()" />
+           <label for="radioUC">Upper case</label><br>
+         </form>
+     </div>
+    </div>
+    <script>
+        function convertText() {
+            let inputText=document.getElementById("resultField").value;
+            if (document.getElementById("radioLC").checked) {
+            inputText = inputText.toLowerCase();
+            } else if (document.getElementById("radioUC").checked) {
+            inputText = inputText.toUpperCase();
+            }
+            document.getElementById("resultField").value = inputText;
+        }
+    </script>
+  </body>
+</html>            

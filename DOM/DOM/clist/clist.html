@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EXAMPLE OF ADDING NEW RECORDS TO THE CONTRIBUTION LIST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="clist.css" /> -->
+    <script>
+        let xmlDoc;
+        function loadXMLDoc(filename) {
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", filename, false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+        function displayResult() {
+            xmlDoc = loadXMLDoc("clist.xml");
+            let xmlText = new XMLSerializer().serializeToString(xmlDoc);
+            document.webform.xmltext.value = xmlText;
+        }
+        function addRecord() {
+            let old = xmlDoc.getElementsByTagName("person")[0];
+            let clone = old.cloneNode(true);
+            let length = clone.children.length;
+            for (let i = 0; i < length; i++) {
+                clone.children[i].childNodes[0].nodeValue = document.webform.elements[i].value;
+            }
+            xmlDoc.documentElement.appendChild(clone);
+            let xmlText = new XMLSerializer().serializeToString(xmlDoc);
+            document.webform.xmltext.value = xmlText;
+        }
+    </script>
+</head>
+
+<body onload="displayResult()">
+    <form name="webform" id="webform">
+        <div id="title">
+            <h1>EXAMPLE OF ADDING NEW RECORDS TO THE CONTRIBUTION LIST</h1>
+        </div>
+        <div id="data_entry">
+            <h3 style="margin-top: 0px">Enter a New Contributor</h3>
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input name="name" id="first" size="20" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input name="last" id="last" size="20" /></td>
+                </tr>
+                <tr>
+                    <td>Street</td>
+                    <td>
+                        <input name="street" id="street" size="30" /></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input name="city" id="city" size="30" /></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><input name="state" id="state" size="2" /></td>
+                </tr>
+                <tr>
+                    <td>Zip</td>
+                    <td><input name="zip" id="fzip" size="5" /></td>
+                </tr>
+                <tr>
+                    <td>Amount</td>
+                    <td><input name="amount" id="famount" size="7" /></td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td><input name="date" id="fdate" size="10" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="buttoncell">
+                        <input type="button" value="Add Contributor" onclick="addRecord()" />
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="ctable">
+            <table>
+                <tr>
+                    <td>
+                        <textarea name="xmltext" id="xmltext" rows="30" cols="50"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>

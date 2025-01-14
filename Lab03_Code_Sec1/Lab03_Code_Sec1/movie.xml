@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movieDatabase>
+  <movie>
+    <title>Inception</title>
+    <genre>Action, Adventure, Sci-Fi</genre>
+    <year>2010</year>
+    <director>Christopher Nolan</director>
+    <cast>
+      <actor>Leonardo DiCaprio</actor>
+      <actor>Joseph Gordon-Levitt</actor>
+      <actor>Ellen Page</actor>
+    </cast>
+    <duration>148</duration>
+  </movie>
+  <movie>
+    <title>The Godfather</title>
+    <genre>Crime, Drama</genre>
+    <year>1972</year>
+    <director>Francis Ford Coppola</director>
+    <cast>
+      <actor>Marlon Brando</actor>
+      <actor>Al pacino</actor>
+      <actor>James Caan</actor>
+    </cast>
+    <duration>175</duration>
+  </movie>
+  <movie>
+    <title>Parasite</title>
+    <genre>Drama, Thriller</genre>
+    <year>2019</year>
+    <director>Book Joon Ho</director>
+    <cast>
+      <actor>Kang-ho</actor>
+      <actor>Lee Sun-Kyun</actor>
+      <actor>Yeo-Jeong</actor>
+    </cast>
+    <duration>132</duration>
+  </movie>
+  <movie>
+    <title>The Dark Knight</title>
+    <genre>Action, Crime, Drama</genre>
+    <year>2008</year>
+    <director>Christopher Nolan</director>
+    <cast>
+      <actor>Christian Bale</actor>
+      <actor>Headth Ledger</actor>
+      <actor>Aaron Eckhart</actor>
+    </cast>
+    <duration>152</duration>
+  </movie>
+</movieDatabase>

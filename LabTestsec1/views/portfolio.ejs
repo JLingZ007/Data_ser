@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css' />
+    <title>Portfolio</title>
+</head>
+
+<body class="h-100">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-sm-2  bg-success py-5 fs-5">
+                <nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="http://localhost:3000/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="http://localhost:3000/student">Student List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="http://localhost:3000/student/portfolio">My Portfolio</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row col-sm-10 bg-primary-subtle">
+                <header>
+                    <h1 class="mb-4 mt-3">
+                        <%= port.name %>
+                    </h1>
+                    <h3 class="py-2 mb-3 mt-2 border-bottom border-danger">Portfolio</h3>
+                    <div class="row-sm-5">
+                        <h2 class="fs-1">About Me</h2> 
+                        <p>I am a passionate and dedicated
+                            Computing and Digital Technologies student currently pursuing my bachelor's
+                            degree at Khon Kaen University. I have a strong interest in web development
+                            and programming.</p>
+                    </div>
+                    <div class="row-sm-5">
+                        <h2>Contact Me</h2>
+                        <p>You can reach me at <a href="<%= port.contact.email %>"><%= port.contact.email %></a>. Feel free to connect with me on <a href="<%= port.contact.linkedin %>">LinkedIn</a> as well.</p>
+                    </div>
+                </header>
+            </div>
+        </div>
+        
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "Departments":[
+        {
+            "deptNo": "d01",
+            "deptName": "Computer Support",
+            "tel": "08555554"
+        },
+        {
+            "deptNo": "d02",
+            "deptName": "Sales",
+            "tel": "09644524"
+        }
+    ]
+}

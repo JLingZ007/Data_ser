@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+   <CD>
+      <title>The Blue sky</title>
+      <artist>J.K Ring</artist>
+   </CD>
+
+   <CD>
+      <title>Wispering</title>
+      <artist>Boby Bile</artist> 
+   </CD>
+  <CD>
+      <title>Never cry</title>
+      <artist>Jane Lai</artist> 
+   </CD>
+</catalog>

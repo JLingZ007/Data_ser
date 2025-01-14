@@ -1,0 +1,9 @@
+console.dir(document);
+console.log(document.URL);
+console.log(document.childNodes);
+console.log(document.firstChild);
+console.log(document.lastChild);
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.title);
+console.log(document.body);

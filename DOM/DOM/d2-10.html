@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Document Object</h1>
+<h2>The querySelectorAll() Method</h2>
+<p>Add a background color to the first p element with class="example":</p>
+
+<h2 class="example">A heading</h2>
+<p class="example">A paragraph 1</p> 
+<p class="example">A paragraph 2</p> 
+
+<script>
+const nodeList = document.querySelectorAll("p.example");
+nodeList[0].style.backgroundColor = "red";
+</script>
+</body>
+</html>

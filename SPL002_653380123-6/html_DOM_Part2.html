@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>The Document Object</h1>
+    <p>Add new paragraph when input text from text box and
+        press submit</p>
+    <form>
+        <input type="text" id="inputText" size="50" />
+        <input type="button" value="Submit" onclick="addParagraph()" />
+    </form>
+    <div id="div1">
+    </div>
+    <script> 
+        function addParagraph() { 
+            let inputText = document.getElementById("inputText").value;                     
+            let newParagraph = document.createElement("p");         
+            newParagraph.textContent = inputText;           
+            document.getElementById("div1").appendChild(newParagraph);
+        }
+    </script>
+</body>
+
+</html>

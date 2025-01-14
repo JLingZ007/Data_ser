@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dom.css">
+    <title>Document</title>
+</head>
+
+<body onload="loadXMLDoc()">
+    <div class="container">
+        <h1 class="title">Adding New Record Student</h1>
+        <div class="form_data">
+            <form name="webform" id="webform">
+                <div id="data_entry">
+                    <h3>Enter new information Student</h3>
+                    <div class="space">
+                        <label for="">First Name : </label> <label class="imp">*</label> <br>
+                        <input name="name" id="first" placeholder="Enter Your First Name" />
+                    </div>
+                    <div class="space">
+                        <label for="">Last Name : </label> <label class="imp">*</label> <br>
+                        <input name="last" id="last" placeholder="Enter Your Last Name" />
+                    </div>
+                    <div class="space">
+                        <label for="">Student ID : </label> <label class="imp">*</label> <br>
+                        <input name="id" id="id" placeholder="Enter Your StudentID" />
+                    </div>
+                    <div class="space">
+                        <label for="">Sex : </label> <label class="imp">*</label> <br>
+                        <select name="sex" id="sex">
+                            <option value="" disabled selected>SELECT</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="LGBTQ+">LGBTQ+</option>
+                        </select>
+                        
+                    </div>
+                    <div class="space">
+                        <label for="">Birthday : </label> <label class="imp">*</label> <br>
+                        <input type="date" name="birthday" id="birthday" placeholder="Enter Your Birthday" />
+                    </div>
+                    <div class="buttoncell space">
+                        <button class="btn" type="button" value="Add Contributor" onclick="addRecord()">Add</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <table border="1" id="table" class="tone"></table>
+    </div>
+
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    showRecords(this);
+                }
+            };
+            xmlhttp.open("GET", "student.xml", true);
+            xmlhttp.send();
+        }
+
+        function showRecords(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>First Name</th><th>Last Name</th><th>Student ID</th><th>Sex</th><th>Birthday</th></tr>";
+            var x = xmlDoc.getElementsByTagName("student")
+            for (i = 0; i < x.length; i++) {
+                table += "<tr>" +
+                    "<td>" + x[i].getElementsByTagName("firstname")[0].childNodes[0].nodeValue + "</td>" +
+                    "<td>" + x[i].getElementsByTagName("lastname")[0].childNodes[0].nodeValue + "</td>" +
+                    "<td>" + x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue + "</td>" +
+                    "<td>" + x[i].getElementsByTagName("sex")[0].childNodes[0].nodeValue + "</td>" +
+                    "<td>" + x[i].getElementsByTagName("birthday")[0].childNodes[0].nodeValue + "</td>" +
+                    "</tr>";
+            }
+            document.getElementById("table").innerHTML = table;
+        }
+
+        function addRecord() {
+            let firstName = document.getElementById("first").value;
+            let lastName = document.getElementById("last").value;
+            let id = document.getElementById("id").value;
+            let sex = document.getElementById("sex").value;
+            let birthday = document.getElementById("birthday").value;
+            let table = document.getElementById("table");
+            let progress = document.getElementById("progress");
+
+            let newRow = table.insertRow();
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+            let cell3 = newRow.insertCell(2);
+            let cell4 = newRow.insertCell(3);
+            let cell5 = newRow.insertCell(4);
+
+            cell1.innerHTML = firstName;
+            cell2.innerHTML = lastName;
+            cell3.innerHTML = id;
+            cell4.innerHTML = sex;
+            cell5.innerHTML = birthday;
+        }
+
+    </script>
+
+</body>
+
+</html>

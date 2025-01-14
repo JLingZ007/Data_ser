@@ -1,0 +1,43 @@
+[
+    {
+      "deptNo": "d01",
+      "deptName": "Computer Science",
+      "contactNumber": "08555554"
+    },
+    {
+      "deptNo": "d02",
+      "deptName": "Business Administration",
+      "contactNumber": "09644524"
+    },
+    {
+      "deptNo": "d03",
+      "deptName": "Electrical Engineering",
+      "contactNumber": "08677766"
+    },
+    {
+      "deptNo": "d04",
+      "deptName": "Mechanical Engineering",
+      "contactNumber": "09788899"
+    },
+    {
+      "deptNo": "d05",
+      "deptName": "Civil Engineering",
+      "contactNumber": "08911122"
+    },
+    {
+      "deptNo": "d06",
+      "deptName": "Chemical Engineering",
+      "contactNumber": "08123456"
+    },
+    {
+      "deptNo": "d07",
+      "deptName": "Biotechnology",
+      "contactNumber": "08234567"
+    },
+    {
+      "deptNo": "d08",
+      "deptName": "Information Technology",
+      "contactNumber": "08345678"
+    }
+  ]
+  

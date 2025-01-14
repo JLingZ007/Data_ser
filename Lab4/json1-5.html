@@ -1,0 +1,72 @@
+<html>
+<body>
+<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+<style>
+    table.GeneratedTable {
+      width: 60%;
+      background-color: #ffffff;
+      border-collapse: collapse;
+      border-width: 2px;
+      border-color: #ffcc00;
+      border-style: solid;
+      color: #000000;
+    }
+    
+    table.GeneratedTable td, table.GeneratedTable th {
+      border-width: 2px;
+      border-color: #ffcc00;
+      border-style: solid;
+      padding: 3px;
+    }
+    
+    table.GeneratedTable thead {
+      background-color: #ffcc00;
+    }
+    </style>
+    
+    <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
+    <div id="id01"></div>
+    <table class="GeneratedTable">
+      <thead>
+        <tr>
+          <th>CEO Name</th>
+          <th>Num of Emp</th>
+          <th>State Address</th>
+          <th>Latitude</th>
+          <th>Longtitude</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <!--ส่วนแสดงผลลัพธ์-->
+            <td><span class="c01"></span></td>
+            <td><span class="c02"></span></td>
+            <td><span class="c03"></span></td>
+            <td><span class="c04"></span></td>
+            <td><span class="c05"></span></td> 
+         </tr>
+      </tbody>
+    </table>
+
+
+<script>
+// Assuming you have an HTML table with the id "companyTable" where you want to display the data
+// JSON data
+const jsontxt = ' {"name": "Sun Star","numberEmp": 10000,"ceo": "Mary Jane","address": { "state": "NY","geo": { "lat": "40.7128 N", "long": "74.0060 W" } }} '
+
+//จงเขียนคำสั่งตามโจทย์
+const obj = JSON.parse(jsontxt)
+
+document.querySelector(".c01").textContent = obj.ceo;
+document.querySelector(".c02").textContent = obj.numberEmp;
+document.querySelector(".c03").textContent = obj.address.state;
+document.querySelector(".c04").textContent = obj.address.geo.lat;
+document.querySelector(".c05").textContent = obj.address.geo.long;
+
+</script>
+</body>
+</html>
+
+    
+
+

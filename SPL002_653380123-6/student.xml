@@ -1,0 +1,9 @@
+<students>
+    <student>
+        <firstname>จิราวัฒน์</firstname>
+        <lastname>สุวิทยะศิริ</lastname>
+        <id>653380123-6</id>
+        <sex>Male</sex>
+        <birthday>05-30-2004</birthday>
+    </student>
+</students>

@@ -1,0 +1,110 @@
+{
+    "Customers" :[
+        {
+            "cusID" : "c101",
+            "custName" : "Smith Loy",
+            "email" : "smith@gmail.com",
+            "Orders" :[
+                {
+                    "orderID" : "ord01",
+                    "orderDate" : "15-07-2566",
+                    "OrderDetails" :[
+                        {
+                            "orderDetailsID" : "od001",
+                            "prodID" : "p01",
+                            "qty" : "1",
+                            "price" : "1000"
+                        },
+                        {
+                            "orderDetailsID" : "od002",
+                            "prodID" : "p02",
+                            "qty" : "1",
+                            "price" : "700"
+                        }
+                       
+                    ]
+                },
+                {
+                    "orderID" : "ord03",
+                    "orderDate" : "21-07-2566",
+                    "OrderDetails" :[
+                        {
+                            "orderDetailsID" : "od004",
+                            "prodID" : "p03",
+                            "qty" : "2",
+                            "price" : "20"
+                        },
+                        {
+                            "orderDetailsID" : "od005",
+                            "prodID" : "p04",
+                            "qty" : "1",
+                            "price" : "15"
+
+                        }
+                       
+                    ]
+                }
+            ]
+        },
+        {
+            "cusID" : "c102",
+            "custName" : "Mary Jane",
+            "email" : "mar@hotmail.com",
+            "Orders" :[
+                {
+                    "orderID" : "ord02",
+                    "orderDate" : "20-07-2566",
+                    "OrderDetails" :[
+                        {
+                            "orderDetailsID" : "od003",
+                            "prodID" : "p02",
+                            "qty" : "2",
+                            "price" : "700"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "cusID" : "c103",
+            "custName" : "Wiily Mac",
+            "email" : "will@gmail.com",
+            "Orders" :[
+                {
+                    "orderID" : "ord04",
+                    "orderDate" : "22-07-2566",
+                    "OrderDetails" :[
+                        {
+                            "orderDetailsID" : "od006",
+                            "prodID" : "p01",
+                            "qty" : "2",
+                            "price" : "1000"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "prodID": "p01",
+            "prodName": "Labtop",
+            "price": 1000
+        },
+        {
+            "prodID": "p02",
+            "prodName": "SmartPhone",
+            "price": 700
+        },
+        {
+            "prodID": "p03",
+            "prodName": "Mouse",
+            "price": 20
+        },
+        {
+            "prodID": "p04",
+            "prodName": "USB",
+            "price": 15
+        }
+    ]
+}

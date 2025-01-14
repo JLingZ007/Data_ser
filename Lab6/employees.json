@@ -1,0 +1,22 @@
+{
+    "Employees":[
+        {
+            "empID": "e0001",
+            "empName": "Smith Loy",
+            "email": "smith@gmail.com",
+            "deptNo": "d01"
+        },
+        {
+            "empID": "e0002",
+            "empName": "Mary Jane",
+            "email": "mar@hotmail.com",
+            "deptNo": "d01"
+        },
+        {
+            "empID": "e0003",
+            "empName": "Wiily Mac",
+            "email": "will@gmail.com",
+            "deptNo": "d02"
+        }
+    ]
+}
